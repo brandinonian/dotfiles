@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Setting up ghostty..."
+echo "setting up ghostty..."
 
 ln -s ~/dev/dotfiles/ghostty/conf ~/.config/ghostty
 
-echo "Done"
+echo "done"
