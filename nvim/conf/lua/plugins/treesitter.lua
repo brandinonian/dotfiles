@@ -19,7 +19,7 @@ return {
         highlight = { enable = true },
         indent = { enable = true },
         autotag = { enable = true },
-        context_commentstring = { enable = true, enable_autocmd = false },
+        -- context_commentstring = { enable = true, enable_autocmd = false },
         incremental_selection = {
           enable = true,
           keymaps = {

@@ -5,7 +5,7 @@ return {
   config = function()
     require("tokyonight").setup({
       style = "night", -- options: storm, moon, night, day
-      transparent = false,
+      transparent = true,
       terminal_colors = true,
       styles = {
         comments = { italic = true },
@@ -21,7 +21,7 @@ return {
       dim_inactive = false,
       lualine_bold = false,
     })
-    
+
     -- Load the colorscheme
     vim.cmd([[colorscheme tokyonight]])
   end,

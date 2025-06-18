@@ -1,5 +1,4 @@
 #!/bin/bash
--- set the leader key
 
 echo "setting up neovim..."
 
