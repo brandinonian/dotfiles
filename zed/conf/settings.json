@@ -13,7 +13,7 @@
   "buffer_font_size": 16,
   "confirm_quit": false,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
     "dark": "One Dark"
   },

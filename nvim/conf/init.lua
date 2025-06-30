@@ -42,3 +42,11 @@ require("config.keymaps")
 
 -- Set up autocommands
 require("config.autocmds")
+
+-- LSP
+vim.lsp.enable({"gopls"})
+
+vim.diagnostic.config({
+  virtual_lines = true,
+  underline = true,
+})

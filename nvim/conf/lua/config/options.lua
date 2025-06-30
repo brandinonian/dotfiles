@@ -23,8 +23,8 @@ opt.incsearch = true
 -- Appearance
 opt.termguicolors = true
 opt.background = "dark"
-opt.signcolumn = "yes"
-opt.cursorline = true
+--opt.signcolumn = "yes"
+--opt.cursorline = false
 
 -- Backspace
 opt.backspace = "indent,eol,start"
