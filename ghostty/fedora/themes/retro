@@ -1,0 +1,41 @@
+# Retro Green Terminal Theme for Ghostty
+# A nostalgic CRT-inspired theme with modern subtle highlighting
+
+# Basic colors
+background = 000000
+foreground = 00ff41
+
+# Cursor
+cursor-color = 00ff41
+cursor-text = 000000
+
+# Selection
+selection-background = 003300
+selection-foreground = 00ff41
+
+# Standard ANSI colors (0-7)
+palette = 0=#000000
+palette = 1=#ff4444
+palette = 2=#44ff44
+palette = 3=#ffff44
+palette = 4=#4488ff
+palette = 5=#ff44ff
+palette = 6=#44ffff
+palette = 7=#cccccc
+
+# Bright ANSI colors (8-15)
+palette = 8=#444444
+palette = 9=#ff6666
+palette = 10=#66ff66
+palette = 11=#ffff66
+palette = 12=#66aaff
+palette = 13=#ff66ff
+palette = 14=#66ffff
+palette = 15=#ffffff
+
+# Optional: Add some retro flair with these settings
+# window-padding-x = 8
+# window-padding-y = 8
+
+# For that authentic CRT look, you might want to enable:
+# unfocused-split-opacity = 0.8
