@@ -4,8 +4,8 @@ set -e
 
 REPO_PATH="$HOME/dev/dotfiles"
 BACKUP_PATH="$REPO_PATH/backup"
-SRC="$REPO_PATH/zed"
-CFG_PATH="$HOME/.config/zed"
+SRC="$REPO_PATH/ghostty/fedora"
+CFG_PATH="$HOME/.config/ghostty"
 
 # Check if repo directory exists
 if [ ! -d "$REPO_PATH" ]; then
@@ -22,7 +22,7 @@ create_symlinks() {
     # Handle existing directory
     if [ -d "$CFG_PATH" ] && [ ! -L "$CFG_PATH" ]; then
         echo "Backing up existing config"
-        cp -r "$CFG_PATH" "$BACKUP_PATH/zed.backup.$(date +%Y%m%d_%H%M%S)"
+        cp -r "$CFG_PATH" "$BACKUP_PATH/ghostty.backup.$(date +%Y%m%d_%H%M%S)"
     fi
 
     # Remove existing symlink

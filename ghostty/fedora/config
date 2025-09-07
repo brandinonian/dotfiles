@@ -1,0 +1,5 @@
+theme = "tokyonight"
+
+window-decoration = "none"
+
+font-size = 11

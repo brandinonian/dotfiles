@@ -1,10 +1,5 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
-
-# set primary gruvbox colorscheme colors
-# see https://github.com/morhetz/gruvbox-contrib/blob/master/color.table
-
 set $bg #000000CC
 set $bg_2 #00000080
 #set $bg_2 #504945CC
@@ -14,15 +9,17 @@ set $fg_2 #D5C4A1
 set $red #cc241d
 set $green #98971a
 set $yellow #d79921
-set $blue #076678CC
-set $darkgray #1d2021CC
+set $blue #184aa1
+set $hl #d511d9
+set $darkgray #1d2021
+set $black #000000
 
-# class                 border  bground text      indicator child_border
-client.focused          $bg_2   $bg_2   $fg       $blue     $bg_2
-client.focused_inactive $bg_2   #5F676A $fg       #484E50   #5F676A
-client.unfocused        $bg     $bg     $fg       #292D2E   $bg
-client.urgent           #2F343A #CC241D $fg_1     #CC241D   #CC241D
-client.placeholder      #1D2021 #0C0C0C $fg       #000000   #0C0C0C
+# class                 border      bground   text      indicator     child_border
+client.focused          $hl         $hl       $black    $darkgray     $hl
+client.focused_inactive $blue       $blue     $fg       $blue         $blue
+client.unfocused        $blue       $blue     $fg       $blue         $blue
+client.urgent           $red        $red      $fg_1     $red          $red
+client.placeholder      #1D2021     #0C0C0C   $fg       #000000       #0C0C0C
 
 ### Variables
 #
@@ -34,7 +31,8 @@ set $down j
 set $up k
 set $right l
 # Set preferred terminal emulator
-set $term kitty
+#set $term kitty
+set $term ghostty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -95,10 +93,15 @@ input "1739:52992:SYNA2BA6:00_06CB:CF00_Touchpad" {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+t exec $term
+    bindsym $mod+Return exec $term
 
     # Start Google Chrome
     bindsym $mod+b exec google-chrome
+
+    # Start zed
+    bindsym $mod+z exec zed
+
+    # TODO development zed launcher?
 
     # Kill focused window
     bindsym $mod+q kill
@@ -117,7 +120,7 @@ input "1739:52992:SYNA2BA6:00_06CB:CF00_Touchpad" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+w+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -180,7 +183,7 @@ input "1739:52992:SYNA2BA6:00_06CB:CF00_Touchpad" {
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    bindsym $mod+t layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
