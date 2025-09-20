@@ -1,3 +1,5 @@
 theme = "tokyonight"
 
+confirm-close-surface = false
+
 font-size = 14
