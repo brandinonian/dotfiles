@@ -1,8 +1,12 @@
 #!/bin/bash
 
-echo "setting up oh-my-posh..."
+EVAL='eval "$(oh-my-posh init zsh --config $HOME/dotfiles/oh-my-posh/brando.omp.json)"'
 
-# TODO
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/spaceship.omp.json)"
+ZSHRC="$HOME/.zshrc"
 
-echo "done"
+if ! grep -qxF "$EVAL" "$ZSHRC"; then
+  echo "$EVAL" >> "$ZSHRC"
+  echo "oh-my-posh configured."
+else
+  echo "$ZSHRC already configured, nothing to do."
+fi

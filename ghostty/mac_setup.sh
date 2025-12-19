@@ -2,7 +2,7 @@
 
 set -e
 
-REPO_PATH="$HOME/dev/dotfiles"
+REPO_PATH="$HOME/dotfiles"
 BACKUP_PATH="$REPO_PATH/backup"
 SRC="$REPO_PATH/ghostty/mac"
 CFG_PATH="$HOME/.config/ghostty"
