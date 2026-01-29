@@ -11,7 +11,7 @@
   "relative_line_numbers": "enabled",
   "confirm_quit": false,
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 15.0,
   "tab_size": 2,
   "theme": {
     "mode": "dark",
@@ -19,6 +19,13 @@
     "dark": "One Dark"
   },
   "languages": {
+    "TypeScript": {
+      "auto_indent_on_paste": false
+    },
+    "CSharp": {
+      "tab_size": 4,
+      "auto_indent_on_paste": false
+    },
     "JavaScript": {
       "formatter": {
         "external": {
